@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GameBinder – All Your Games. Bound Together.</title>
+<meta name="description" content="GameBinder is a universal PC gaming library and launcher that brings your games from Steam, Epic Games, GOG and Xbox / Microsoft Store into one single place.">
+<meta name="keywords" content="GameBinder, universal PC game launcher, PC game library, game library manager, PC gaming launcher, game discovery, gaming library organizer, game, gamebinder">
+<meta name="theme-color" content="#050506">
+<link rel="canonical" href="https://gamebinder.github.io/">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GameBinder – All Your Games. Bound Together.">
+<meta property="og:description" content="One library. One experience. Your entire gaming world.">
+<meta property="og:image" content="https://gamebinder.github.io/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"GameBinder","applicationCategory":"GameApplication","operatingSystem":"Windows","description":"A universal PC gaming library and launcher."}</script>
+<link rel="preload" as="image" href="assets/img/banner.webp">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="ambient" aria-hidden="true"><i></i><i></i></div>
+
+<header class="nav-wrap">
+  <nav class="nav glass" aria-label="Main">
+    <a class="brand" href="#home" aria-label="GameBinder home"><img src="assets/img/logo-160.webp" width="36" height="36" alt=""><span>GAMEBINDER</span></a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+    <ul id="menu" class="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#platforms">Platforms</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a class="btn btn-sm" href="#download">Download (Under Development)</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+<section id="home" class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <img class="hero-logo" src="assets/img/logo-640.webp" width="132" height="132" alt="GameBinder logo">
+      <h1>All Your Games. Bound Together.</h1>
+      <p class="lead">One library. One experience. Your entire gaming world.</p>
+      <div class="cta">
+        <a class="btn" href="#download" data-download>Download for Windows (Under Development)</a>
+        <a class="btn btn-ghost" href="#features">Explore Features</a>
+      </div>
+    </div>
+    <div class="hero-preview" aria-label="Animated preview of the GameBinder app">
+      <div class="float f1 glass mini-toast"><b>Achievement unlocked</b><span>Elden Ring · Elden Lord</span></div>
+      <div class="glass mini-win">
+        <div class="dots"><i></i><i></i><i></i><em>GameBinder</em></div>
+        <div class="mini-body">
+          <div class="mini-side"><i class="on"></i><i></i><i></i><i></i></div>
+          <div class="mini-grid" id="miniGrid"></div>
+        </div>
+        <div class="mini-fps"><span>Frame rate</span><svg viewBox="0 0 200 40" preserveAspectRatio="none"><path id="fpsLive" d="" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><b id="fpsNum">144</b></div>
+      </div>
+      <div class="float f2 glass mini-chip">4 platforms · 1 library</div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap showcase" id="showcase" aria-labelledby="sc-h">
+  <div class="sec-head reveal"><h2 id="sc-h">See your whole library at once</h2><p>A look at the GameBinder desktop app. Try the views on the left. Game titles, covers and sample stats are for illustration only.</p></div>
+  <div class="app glass reveal" id="app">
+    <div class="dots"><i></i><i></i><i></i><em>GameBinder</em></div>
+    <div class="app-body">
+      <aside class="side" aria-label="App sidebar">
+        <div class="views" role="tablist" aria-label="App views">
+          <button role="tab" data-view="library" aria-selected="true">Library</button>
+          <button role="tab" data-view="bigpicture" aria-selected="false">Big Picture Mode</button>
+          <button role="tab" data-view="atlas" aria-selected="false">Achievement Tracking</button>
+          <button role="tab" data-view="journal" aria-selected="false">FPS Tracking (Under Development)</button>
+          <button role="tab" data-view="launches" aria-selected="false">Track Game Launches (Under Development)</button>
+        </div>
+        <p class="side-h">Platforms</p>
+        <div class="filters" id="filters"></div>
+      </aside>
+      <div class="stage">
+        <div class="view" data-panel="library">
+          <div class="lib-grid" id="libGrid"></div>
+          <aside class="details" id="details" aria-live="polite"></aside>
+        </div>
+        <div class="view" data-panel="bigpicture" hidden>
+          <div class="bp" id="bp"></div>
+        </div>
+        <div class="view" data-panel="atlas" hidden>
+          <div class="atlas" id="atlas"></div>
+        </div>
+        <div class="view" data-panel="journal" hidden>
+          <div class="journal" id="journal"></div>
+        </div>
+        <div class="view" data-panel="launches" hidden>
+          <div class="launches" id="launches"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="preview-note reveal"><strong>Interactive Preview</strong>This is an interactive preview of GameBinder, not the actual desktop application. The interface and appearance may differ from the desktop experience.</p>
+</section>
+
+<section id="features" class="wrap features" aria-labelledby="f-h">
+  <div class="sec-head reveal"><h2 id="f-h">Built around how you actually play</h2><p>Five tools that turn a scattered collection into one place you enjoy opening.</p></div>
+  <div class="feat-grid">
+    <article class="glass feat reveal"><h3>Universal Game Library</h3><p>Every game from every launcher, in one searchable list. Filter by platform, sort by what you played last, and launch with one click.</p><button class="link" data-goto="library">Show in the app</button></article>
+    <article class="glass feat reveal"><h3>Big Picture Mode</h3><p>A full-screen layout made for the couch. Browse with a controller, see large artwork, and start a game without touching the keyboard.</p><button class="link" data-goto="bigpicture">Show in the app</button></article>
+    <article class="glass feat reveal"><h3>Achievement Tracking</h3><p>See progress across all your platforms on one map. Find which games are closest to 100% and what you unlocked most recently.</p><button class="link" data-goto="atlas">Show in the app</button></article>
+    <article class="glass feat reveal"><h3>FPS Tracking (Under Development)</h3><p>Every session keeps a record of frame rate and play time. Compare settings and drivers over time to see what really changed.</p><button class="link" data-goto="journal">Show in the app</button></article>
+    <article class="glass feat reveal"><h3>Track Game Launches (Under Development)</h3><p>Keep track of games launching soon</p><button class="link" data-goto="launches">Show in the app</button></article>
+  </div>
+</section>
+
+<section id="platforms" class="wrap platforms" aria-labelledby="p-h">
+  <div class="sec-head reveal"><h2 id="p-h">Platform integrations</h2><p>GameBinder connects to the launchers you already use.</p></div>
+  <ul class="plat-grid">
+    <li class="glass reveal"><b data-fb="S"><img src="assets/platforms/steam.png" alt="" width="40" height="40" loading="lazy"></b><span>Steam</span></li>
+    <li class="glass reveal"><b data-fb="E"><img src="assets/platforms/epic-games.png" alt="" width="40" height="40" loading="lazy"></b><span>Epic Games</span></li>
+    <li class="glass reveal"><b data-fb="G"><img src="assets/platforms/gog.png" alt="" width="40" height="40" loading="lazy"></b><span>GOG</span></li>
+    <li class="glass reveal"><b data-fb="X"><img src="assets/platforms/xbox.png" alt="" width="40" height="40" loading="lazy"></b><span>Xbox / Microsoft Store</span></li>
+  </ul>
+</section>
+
+<section id="about" class="wrap about" aria-labelledby="a-h">
+  <div class="about-grid">
+    <div class="reveal">
+      <h2 id="a-h">One shelf for a library that grew in pieces</h2>
+      <p>PC gaming grew up across many stores. Each one has its own launcher, its own friends list and its own idea of what a library should look like. Most of us ended up with a handful of apps open just to start one game.</p>
+      <p>GameBinder starts from a simple idea: your games belong to you, wherever you bought them. We are building a single, calm place to find them, launch them and remember how you played them.</p>
+      <p>The goal is software that feels premium and gets out of the way, with no clutter and no extra accounts to manage.</p>
+    </div>
+    <figure class="glass banner-frame reveal"><img src="assets/img/banner-1000.webp" width="1000" height="563" loading="lazy" alt="GameBinder banner showing the logo with flowing glass ribbons"></figure>
+  </div>
+</section>
+
+<section id="requirements" class="wrap requirements" aria-labelledby="r-h">
+  <div class="sec-head reveal"><h2 id="r-h">System Requirements</h2></div>
+  <div class="req-grid">
+    <article class="glass req reveal"><h3>Minimum Requirements</h3><dl><div><dt>OS</dt><dd>Windows 10 (64-bit) or Windows 11</dd></div><div><dt>Processor</dt><dd>Intel Core i3 8th Gen or AMD Ryzen 3 3000 Series</dd></div><div><dt>RAM</dt><dd>8 GB</dd></div><div><dt>Storage</dt><dd>2 GB available space</dd></div><div><dt>Graphics</dt><dd>Intel UHD 620 / AMD Radeon Vega 8</dd></div></dl></article>
+    <article class="glass req reveal"><h3>Recommended Requirements</h3><dl><div><dt>OS</dt><dd>Windows 10 (64-bit) or Windows 11</dd></div><div><dt>Processor</dt><dd>Intel Core i5 10th Gen or AMD Ryzen 5 3600</dd></div><div><dt>RAM</dt><dd>16 GB</dd></div><div><dt>Storage</dt><dd>2–5 GB available SSD space</dd></div><div><dt>Graphics</dt><dd>Intel Iris Xe / AMD Radeon 680M</dd></div></dl></article>
+  </div>
+</section>
+
+<section id="download" class="wrap download" aria-labelledby="d-h">
+  <div class="glass dl reveal">
+    <img src="assets/img/logo-160.webp" width="80" height="80" alt="">
+    <h2 id="d-h">Download GameBinder (App Is Not Released And Is Under Development)</h2>
+    <a class="btn" href="#" data-download>Download for Windows (Under Development)</a>
+    <p class="meta">Version <span data-version>v1.0.0 Beta</span>
+    <div class="dl-cols one">
+      <div><h3>Installation</h3><ul><li>Download the installer</li><li>Run GameBinder-Setup.exe</li><li>Follow the on-screen steps</li><li>Sign in to your launchers to add games</li></ul></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-grid">
+    <div><a class="brand" href="#home"><img src="assets/img/logo-160.webp" width="36" height="36" alt=""><span>GAMEBINDER</span></a><p class="tag">All Your Games. Bound Together.</p></div>
+    <nav aria-label="Footer"><a href="#home">Home</a><a href="#features">Features</a><a href="#platforms">Platforms</a><a href="#about">About</a><a href="#download">Download</a></nav>
+    <nav aria-label="Legal"><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></nav>
+  </div>
+  <p class="wrap legal">© <span id="yr">2026</span> GameBinder. All platform names belong to their respective owners and are used only to describe planned compatibility. Game titles, covers and logos are trademarks of their respective owners and appear for illustration only. GameBinder is not affiliated with or endorsed by them.</p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
