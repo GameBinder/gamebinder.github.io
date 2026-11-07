@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gamebinder.github.io/sitemap.xml
